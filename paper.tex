@@ -1,0 +1,204 @@
+% \documentclass[journal]{IEEEtran}
+\documentclass[12pt,journal,draftclsnofoot,onecolumn]{IEEEtran}
+\IEEEoverridecommandlockouts
+
+% remove colon after subsubsection, use spacing instead
+\makeatletter
+\renewcommand{\@IEEEsectpunct}{\quad}
+\makeatother
+
+\makeatletter
+% add a small spacing *before* subsections
+\let\origsubsubsection\subsubsection
+\renewcommand\subsubsection{\@ifstar{\starsubsubsection}{\nostarsubsubsection}}
+
+\newcommand\nostarsubsubsection[1]
+{\subsubsectionprelude\origsubsubsection{#1}}
+
+\newcommand\subsubsectionprelude{%
+  \vspace{6pt}
+}
+\makeatother
+
+% change default font to charter
+% \usepackage{charter}
+% \usepackage[bitstream-charter]{mathdesign}
+% \usepackage{XCharter}
+\usepackage{amsfonts}
+
+% Fixing IEEEtran.cls bug with [english]{babel}
+\makeatletter
+\def\markboth#1#2{\def\leftmark{\@IEEEcompsoconly{\sffamily}\MakeUppercase{\protect#1}}%
+\def\rightmark{\@IEEEcompsoconly{\sffamily}\MakeUppercase{\protect#2}}}
+\makeatother
+
+% \usepackage{t1enc}
+
+\usepackage{listings}
+\usepackage{multirow}
+%\usepackage[utf8x]{inputenc}
+\usepackage[english]{babel}
+\selectlanguage{english}
+\usepackage{color}
+%\usepackage{caption}
+\usepackage{cite}
+\usepackage[pdftex]{graphicx}
+
+% \usepackage{subfig}
+\usepackage{subcaption}
+\usepackage{amsmath}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+\usepackage{amsfonts}
+\usepackage{array}
+\usepackage{verbatim}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{enumerate}
+\usepackage{multirow}
+
+\usepackage{siunitx}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{multicol}% http://ctan.org/pkg/multicols
+\usepackage[font=footnotesize]{caption}
+% \usepackage[font=scriptsize]{subcaption}
+% Tikz
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\pgfplotsset{plot coordinates/math parser=false}
+\newlength\fheight
+\newlength\fwidth
+\usetikzlibrary{patterns,decorations.pathreplacing,backgrounds,calc}
+\definecolor{SchoolColor}{RGB}{0.71, 0, 0.106}%181,0,27} unipd red
+\definecolor{chaptergrey}{rgb}{0.61, 0, 0.09} % dialed back a little
+\definecolor{midgrey}{rgb}{0.4, 0.4, 0.4}
+\definecolor{chaptergreen}{rgb}{0.09, 0.612, 0}
+\definecolor{chapterpurple}{rgb}{0.522, 0, 0.612}
+\definecolor{chapterlightgreen}{rgb}{0, 0.612, 0.522}
+
+%\raggedbottom
+
+% Pseudocode
+\usepackage[ruled, vlined]{algorithm2e}
+
+\SetKwRepeat{Do}{do}{while}
+\SetKwBlock{wpPa}{with probability $P_A$}{end}
+\DontPrintSemicolon
+% \usepackage{algorithm}
+% \usepackage[noend]{algpseudocode}
+% \renewcommand\algorithmicthen{}
+% \renewcommand\algorithmicdo{}
+\usepackage{lscape}
+
+\addto\captionsenglish{\renewcommand{\figurename}{Fig.}}
+
+\newcommand{\field}[1]{\mathbb{#1}}
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\renewcommand{\arraystretch}{2}
+
+\newcommand{\DP}[1]{\textcolor{blue}{\textbf{(DP says: #1)}}}
+\newcommand{\cri}[1]{\textcolor{violet}{\textbf{(Cri says: #1)}}}
+
+\usepackage{threeparttable}
+%\usepackage[table,xcdraw]{xcolor}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{booktabs}
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\usepackage{array, blindtext}
+\usepackage{wrapfig}
+\usepackage{pdfpages}
+\usepackage[acronym]{glossaries}
+
+% use tikArchiviz images or eps
+\newif\iftikz
+\tikztrue
+
+\graphicspath{{./figures/}}
+
+\title{Technology-based aids for people affected by Autism Spectrum Disorder (ASD)}
+\author{\IEEEauthorblockN{Cristina Gava, Peron Davide}\\
+\small{{Department of Information Engineering, University of Padova -- Via Gradenigo, 6/b, 35131 Padova, Italy\\
+Email: {\tt\{gavacris, perondav\}@dei.unipd.it}\\}}
+}
+
+% Reduce the space below figs.
+%\setlength{\belowcaptionskip}{-0.7cm}
+
+\renewcommand{\equationautorefname}{Eq.}
+
+%% Glossary
+\newacronym{asd}{ASD}{Autism Spectrum Disorder}
+
+\glsresetall
+\begin{document}
+
+\def\equationautorefname~#1\null{(#1)\null}
+\setlength{\belowcaptionskip}{-0.2cm}
+
+% reduce space after title
+\makeatletter
+\patchcmd{\@maketitle}
+  {\addvspace{0.5\baselineskip}\egroup}
+  {\addvspace{-1.2\baselineskip}\egroup}
+  {}
+  {}
+\makeatother
+
+\maketitle
+
+\begin{abstract}
+Individuals affected by Autism Spectrum Disorder(ASD) are often unable to communicate in an
+appropriate way, they show strong difficulties in social interactions and in manifesting their affective
+states.
+The conventional techniques, used to improve the performances of these people in the
+everyday tasks, are observation-based and can require a lot of effort in terms of time and money, with limited
+results.
+Technology-assisted teraphies can result more powerful and fast.
+
+Our aim is to analyze the current technology-based solutions that can help therapists in the treatment
+of people affected by ASD.
+These solutions exploit the joint use of human intelligence and artificial intelligence to improve
+the powerfulness of therapies and to allow a better integration of these individuals in the society.
+Examples of these type of aids are Virtual Assistants and Agents as therapeutic tools,
+wearable technologies or VR headset to help them in everyday communication and to improve their
+fundamental and social skills.
+An interesting field that can be analyzed is the use of robotic avatar instead of a therapist, in order to increase
+the usefulness of a therapy, improving the response and the interaction time of the disabled user.
+\end{abstract}
+
+\glsresetall
+\section{Introduction} \label{sec:introduction}
+
+% TODO Brief presentation of ASD (?)
+\gls{asd} is a term used to cover a very big set of disorders. In this field there are a lot of studies and experiments, but still is one of the most unknown \DP{forse unknown non è il massimo come termine qui} disease. The symptoms are well known, while the causes are mostly unknown. Nowadays, \textit{screening tests} are used to classify a person as affected by \gls{asd}, but these tests have an high percentage of error (false positive or negative) and they can be administered on a patient at least 3 years old. For this reason, several techniques have been studied to wonder if a children has this disorder in the first 2 years of life.
+% TODO Main technologies available until now
+
+\section{Technical Approach}
+\label{sec:tech_approach}
+
+\subsection{Simulated Annealing}
+
+\subsection{Jumping Ball}
+\subsection{Genetic Algorithm}
+
+\section{Conclusions And Future Work}\label{sec:conclusions}
+
+\bibliographystyle{IEEEtran}
+\bibliography{bibliography}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
