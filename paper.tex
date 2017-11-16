@@ -56,7 +56,7 @@
 \usepackage{array}
 \usepackage{verbatim}
 \usepackage{listings}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage{url}
 \usepackage{enumerate}
 \usepackage{multirow}
@@ -127,8 +127,8 @@
 
 \title{Technology-based aids for people affected by Autism Spectrum Disorder (ASD)}
 \author{\IEEEauthorblockN{Cristina Gava, Peron Davide}\\
-\small{{Department of Information Engineering, University of Padova -- Via Gradenigo, 6/b, 35131 Padova, Italy\\
-Email: {\tt\{gavacris, perondav\}@dei.unipd.it}\\}}
+\small{{Neurosensorial Engineering final project\\
+A.A. 2017/2018\\}}
 }
 
 % Reduce the space below figs.
@@ -170,6 +170,14 @@ Our aim is to analyze the current technology-based solutions that can help the t
 These solutions exploit the joint use of human intelligence and artificial intelligence to improve
 the powerfulness of therapies and to allow a better integration of these individuals in the society.
 \end{abstract}
+\begin{IEEEkeywords}
+\centering
+Autism Spectrum Disorder, Avatar-robots, Wearable Technology, Health Monitoring
+\end{IEEEkeywords}
+\clearpage
+
+\tableofcontents
+\clearpage
 
 \glsresetall
 \section{Introduction} \label{sec:introduction}
@@ -190,6 +198,13 @@ The problem of this kind of therapy are the completely subjective evaluation pro
 %TODO Avatar-based techniques to improve the performances of the therapy
 %TODO Methods to detect the anxiety level
 To improve the performances of the sessions, the use of \gls{va} has been introducted.
+\gls{va} consist of an Avatar, that can be a robot or a virtual character, a learning software that receive information from the Avatar, elaborate them and adjust the response of the Avatar, and an interface for the therapist to interpretate the results.
+In a \gls{va} session, the therapist, with the aids of the learning software, learns the Avatar in order to do an action that the child has to imitate, the child tries to imitate the Avatar learning new way to interact with the society.
+Different system has been proposed, we propose here two different solutions, one more general and one more complex and efficient.
+
+\subsection{General AVATAR idea}
+\label{sec:avatar_general}
+The idea of an Avatar-based therapy session is proposed firstly in \cite{Guerrero-vasquez}. They propose a
 
 \section{Everydays tools techniques}
 \label{sec:every_tech}
@@ -197,14 +212,9 @@ To improve the performances of the sessions, the use of \gls{va} has been introd
 \subsection{Jumping Ball}
 \subsection{Genetic Algorithm}
 
-\section{Conclusions And Future Work}\label{sec:conclusions}
+\section{Conclusions}\label{sec:conclusions}
 
 \bibliographystyle{IEEEtran}
-\bibliography{bibliography}
+\bibliography{IEEEabrv,bibliography}
 
 \end{document}
-
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: t
-%%% End:
