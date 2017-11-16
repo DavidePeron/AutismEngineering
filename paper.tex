@@ -253,7 +253,53 @@ This approach has sensible advantages but also some intrinsic shortcomings:
 	\item usually robots don't have a quantitative behavioral analysis tool due to the absence of therapists during their development process.
 \end{itemize}
 
+In this work they try to fulfill these lacks using a set of advance technology tools, specifically a \textit{NAO Robot} (visible in \autoref{fig:nao_robot}) and a Perception Neuron Set of 32 sensors.
 
+In their proposal, the robot will replace the therapist in the room.
+The therapist would wear portable motion sensors giving him a partial control of the robot motion, and receive a visual and auditory stream from the robot. The therapist would also be able to talk to the child through the robot, by using a robotic voice.
+
+\begin{figure}[h]
+\centering
+
+\begin{minipage}{0.48\textwidth}
+\centering
+\includegraphics[width=\textwidth]{nao_robot.png}
+\caption{Scheme of AVATAR system}
+\label{fig:nao_robot}
+\end{minipage}
+\begin{minipage}{0.48\textwidth}
+\centering
+\includegraphics[width=\textwidth]{scores.png}
+\caption{Structure of AVATAR platform}
+\label{fig:scores}
+\end{minipage}
+
+\end{figure}
+
+The strength of this work is that the robot behavior can be adapted based on the degree of involvment of the child in the session.
+Indeed, as the session starts, a low number of \gls{dof} are given to the robot, in order makes the child imitate a set of very simple movements.
+As the user progresses in the engagement (we'll see later that this means take more points), more \gls{dof} are given to the robot, usually enabling disabled actuators, in order to increase the complexity of the movements.
+
+During the whole process a heart-rate measuring band is worn by the partecipant, to monitor the partecipant's level of anxiety and stop or change the session whenever an intervention is required.
+
+To monitor the actual movements performed by the child, a Microsoft Kinect is used.
+
+The movements performed by the robot and imitated by the child are specifically selected to teach the child how to interact with other people and to improve his response to social stimolous.
+
+During the session, points are given to the child as they progress and perform the right movement at the right time.
+The total score is given by the sum of three contributes:
+
+\begin{LaTeXdescription}
+	\item[Motion Score] Is relative to the goodness of the movement made by the patient to imitate the robot;
+	\item[Attention Score] the child takes one point for each second the child was looking at the robot’s face whenever the robot was asking the child a question;
+	\item[Response Score] for this score, points are given for the delay time between the moment in which the robot asks a question and moment in which the child started answering the questions. The child is given 10 points for the first 10 seconds after the robot/therapist stops talking, and one point is subtracted for each second of delay.
+\end{LaTeXdescription}
+
+After 20 minutes of session therapy, results are collected.
+This experiment has been done in five healthy male children and with three different type of interaction subject: an avatar programmed as just said, a pre-programmed robot and a therapist in a classical face-to-face session. Score has been collected for each type of interaction and the results are shown in \autoref{fig:scores}.
+
+As we can see the performance of the avatar are initially almost equal to the ones of a pre-programmed robot, but along the session, child get bored of the last one due to its repetitive movements and requirements, while the score with the avatar increase due to its continuous adaption to the child needs.
+The score collected with a real therapist are sensible lower at the beginning and it increase along the session since the therapist adapt to the child needs.
 \section{Everydays tools techniques}
 \label{sec:every_tech}
 
