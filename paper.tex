@@ -25,6 +25,8 @@
 % \usepackage[bitstream-charter]{mathdesign}
 % \usepackage{XCharter}
 \usepackage{amsfonts}
+\usepackage{diagbox}
+
 
 % Fixing IEEEtran.cls bug with [english]{babel}
 \makeatletter
@@ -141,6 +143,8 @@ A.A. 2017/2018\\}}
 \newacronym{va}{VA}{Virtual Agents}
 \newacronym{dof}{DoF}{Degrees of Freedom}
 \newacronym{td}{TD}{Typically-Developing}
+\newacronym{eeg}{EEG}{Electro Encephalography}
+\newacronym{roc}{ROC}{Receiver Operating Characteristic}
 
 \glsresetall
 \begin{document}
@@ -259,6 +263,53 @@ The experiment results can be summarized with a few crucial conclusions:
 From these results, since the timing (which is strictly associated with adaptation and prediction) is one of the crucial aspects managed by the cerebellum (known to be the cerebral section reporting the most consistent brain differences in autism), it can be supported the hypothesis that bad timing in sensory integration causes degraded motor performance and delayed learning in children with \gls{asd}.
 
 Such dysfunctions could affect not only motor processes but also cognitive ones, and this form of motor tracking could also be useful to better understand the mechanism at the basis of the well-documented visuo-motor impairments in ASD (\cite{Chow2010}, \cite{Green2013}, \cite{Papa}) and throw more light on the functional integrity of brain networks during development in people with ASD.
+
+\subsection{Abnormalities in Connectivity of EEG activity}
+\label{sec:EEG}
+
+In 1943 a first case of an autistic person developing epilepsy was described. Since then, multiple cases have been registered and so researchers started to look for associations between abnormal \gls{eeg} findings and individuals with \gls{asd}. This field is still mostly to be uncovered, since classification and evaluation of \gls{eeg} signals are limited for now, but recent studies suggest a feasible use of this diagnostic technique in the field of gls{asd} \cite{Behnam2008}.
+
+If we unify the knowledge on the \gls{eeg} functioning principles, to the signal processing theory, we obtain a powerful diagnostic tool: representations based on Fourier Transform have been commonly applied and this brought to light that the \gls{eeg} spectrum contains five main frequency bands with characteristic waveforms and so the main way to highlight differences between normal subjects and autistic subjects can be to analyze the coherence of \gls{eeg} signals form different brain regions in order to find coupling among the signals in frequency domain.
+
+\subsubsection{Example of procedure}
+\label{sec:procEEG}
+
+In \cite{Behnam2008} the authors describe a trial done on 10 children with \gls{asd} and a control group of 9 age-matched control subjects that have not suffered from neurological disorder. From the 21 scalp loci of the international $10 - 20$ system the EEG signals were recorded, the subjects were in a relaxed state with the eyes open and more than 10 minutes of data were collected for each child. 
+
+The signal processing passage consisted in low-pass filtering at 100 Hz, subsequent sampling at 256 Hz and digitization through 12-bit ADC. Finally. EEG signals were divided into 3 artifact-free epochs, subsequently filtered trough a Hamming window FIR band-pass filter.
+
+With the signal set in this way the Fourier Transform has been applied, using a Gaussian time window in order to observe sections in which the signal is seen as stationary. 
+
+The last passage was the estimation of coherence variables: MSC is the estimated coherence range (it goes form 0 to 1) and is obtained from auto and cross-power spectra of the channels.
+
+To evaluate the statistical difference between the control group's signals and the ones from the \gls{asd} children group, the authors used one-way analysis of variance tests, while to measure the discriminating ability of the test they used \gls{roc} plots. Moreover, to classify between \gls{asd} subjects and control subjects, nearest neighbor classifier has been used.
+
+\subsubsection{results}
+\label{sec:discussion}
+
+Results show that the discriminating ability of nearest neighbor classifier over STFT-BW is satisfactory (0.967 for the F3 electrode) and table \ref{tab:prediction} shows a $89.5 \%$ probability of correct classification through  STFT-BW.
+Moreover, figure \ref{fig:head} shows the obtained results for the three frequency bands alpha beta and gamma: coherence values that show meaningful differences with $p < 0.05 $ are represented through dot lines, while differences with $p < 0.01$ are represented through solid lines: the resulting observation is that there are more abnormalities in connectivity for the left temporal lobe than the other ones, observation that sticks with the assumption of a correlation between \gls{asd} syndrome and abnormal behavior of temporal lobes \cite{Zilbovicius2000} \cite{ANA}.
+
+\begin{table}
+\centering
+\begin{tabular}[h]{c|cc}
+\toprule
+\diagbox{Cases}{Membership} & Autism & Normal\\
+\midrule
+Autism & 90.0 & 10.0\\
+Normal & 11.1 & 88.9\\
+\bottomrule
+\end{tabular}
+\caption{Table of confusion for the correct group discrimination using STFT-BW}
+\label{tab:prediction}
+\end{table}
+
+\begin{figure}
+\centering
+\includegraphics[width = .5\textwidth]{head.png}
+\caption{Results of coherence values and connectivity in channels brain}
+\label{fig:head}
+\end{figure}
 
 \section{Therapeutical techniques}
 \label{sec:thera_tech}
