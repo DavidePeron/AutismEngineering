@@ -1,4 +1,5 @@
-# AutismEngineering - Technology-based aids for people affected byAutism Spectrum Disorder (ASD)
+# AutismEngineering
+## Technology-based aids for people affected by Autism Spectrum Disorder (ASD)
 
 Individuals affected by Autism Spectrum Disorder(ASD), especially the not-verbal ones, are often
 unable to communicate in an appropriate way, they show strong difficulties in social interactions and
