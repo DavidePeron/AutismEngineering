@@ -27,3 +27,6 @@
 *.synctex.gz
 *.synctex.gz(busy)
 *.pdfsync
+
+## Unix files:
+.directory
