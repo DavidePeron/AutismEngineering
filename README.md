@@ -6,6 +6,7 @@ in manifesting their affective states or their necessities. The conventional tec
 the performances of these people in the everyday tasks, are observation-based and can require a lot of
 effort in terms of time and money, with limited results. Technology-assisted therapies can result more
 powerful and fast.
+
 Our aim is to analyze the current technology-based solutions that can help the therapist and the
 family of an autistic subject to interact with him. These solutions exploit the joint use of human
 intelligence and artificial intelligence to improve the powerfulness of therapies and to allow a better
