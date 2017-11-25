@@ -108,7 +108,7 @@
 \renewcommand{\arraystretch}{2}
 
 \newcommand{\DP}[1]{\textcolor{blue}{\textbf{(DP says: #1)}}}
-\newcommand{\cri}[1]{\textcolor{violet}{\textbf{(Cri says: #1)}}}
+\newcommand{\cri}[1]{\textcolor{yellow}{\textbf{(Cri says: #1)}}}
 
 \usepackage{threeparttable}
 %\usepackage[table,xcdraw]{xcolor}
@@ -145,6 +145,11 @@ A.A. 2017/2018\\}}
 \newacronym{td}{TD}{Typically-Developing}
 \newacronym{eeg}{EEG}{Electro Encephalography}
 \newacronym{roc}{ROC}{Receiver Operating Characteristic}
+\newacronym{as}{AS}{Anxiety-Sensitive}
+\newacronym{ps}{PS}{Performance-Sensitive}
+\newacronym{pr}{PR}{Pulse Rate}
+\newacronym{eda}{EDA}{Electrodermal Activity}
+\newacronym{skt}{SKT}{Skin Temperature}
 
 \glsresetall
 \begin{document}
@@ -284,11 +289,11 @@ The last passage was the estimation of coherence variables: MSC is the estimated
 
 To evaluate the statistical difference between the control group's signals and the ones from the \gls{asd} children group, the authors used one-way analysis of variance tests, while to measure the discriminating ability of the test they used \gls{roc} plots. Moreover, to classify between \gls{asd} subjects and control subjects, nearest neighbor classifier has been used.
 
-\subsubsection{results}
+\subsubsection{Results}
 \label{sec:discussion}
 
-Results show that the discriminating ability of nearest neighbor classifier over STFT-BW is satisfactory (0.967 for the F3 electrode) and table \ref{tab:prediction} shows a $89.5 \%$ probability of correct classification through  STFT-BW.
-Moreover, figure \ref{fig:head} shows the obtained results for the three frequency bands alpha beta and gamma: coherence values that show meaningful differences with $p < 0.05 $ are represented through dot lines, while differences with $p < 0.01$ are represented through solid lines: the resulting observation is that there are more abnormalities in connectivity for the left temporal lobe than the other ones, observation that sticks with the assumption of a correlation between \gls{asd} syndrome and abnormal behavior of temporal lobes \cite{Zilbovicius2000} \cite{ANA}.
+Results show that the discriminating ability of nearest neighbor classifier over STFT-BW is satisfactory (0.967 for the F3 electrode) and \autoref{tab:prediction} shows a $89.5 \%$ probability of correct classification through  STFT-BW.
+Moreover, \autoref{fig:head} shows the obtained results for the three frequency bands alpha beta and gamma: coherence values that show meaningful differences with $p < 0.05 $ are represented through dot lines, while differences with $p < 0.01$ are represented through solid lines: the resulting observation is that there are more abnormalities in connectivity for the left temporal lobe than the other ones, observation that sticks with the assumption of a correlation between \gls{asd} syndrome and abnormal behavior of temporal lobes \cite{Zilbovicius2000} \cite{ANA}.
 
 \begin{table}
 \centering
@@ -387,6 +392,57 @@ This experiment has been done in five healthy male children and with three diffe
 
 As we can see the performance of the avatar are initially almost equal to the ones of a pre-programmed robot, but along the session, child gets bored of the last one due to its repetitive movements and requirements, while the score with the avatar increases due to its continuous adaption to the child needs.
 The scores collected with a real therapist are very lower at the beginning compared with the first two type of interaction and it increases along the session since the therapist adapts the requirements to the child needs.
+
+\subsection{Physiology-sensitive VR-based platform}
+\label{sec:anxiety}
+
+Anxiety is a condition that usually characterizes the subjects with \gls{asd} and has bad effects on educational training, but often it is hard for the therapist to recognize it and properly intervene to reduce it. Several studies show that physiological signals can be evoked by different stimuli in an environment with the presence of a VR, and normally the transition from a relaxed state to an anxiety state manifests through the activation of the Autonomous Nervous System. In particular, for the case of anxiety the physiology biomakers can be for example the heart rate increase, increase of conductance in tonic activity in skin or decrease of skin temperature. All these changes can be registered and interpreted by a computer.
+
+Kuriakose et al. in \cite{Kuriakose2017} presented a new interactive and didactic-training tool in which the anxiety level of the autistic person was monitored in real-time, parallel to the performance's measurements, and through it the VR-based tasks were progressively adapted.
+
+\subsubsection{Structure of the trial}
+The system was divided into two subsystems, the \gls{as} and the \gls{ps} systems: the \gls{as} one adapts the tasks' level based on the performance of the subject and his anxiety level measured through the physiological indexes; the \gls{ps} one changes tasks' difficulty based only on the performance of the subject.
+
+While the participants were interacting with VR-based systems, their \gls{pr}, \gls{eda} and \gls{skt} signals, were acquired by an instruments called Biopac MP150 (from Biopac Systems Inc.) which operates in wireless mode with sampling frequency of 1 KHz. These signals were chosen because of their advantage of being measurable in a non-invasive way. 
+
+To be specific, \gls{pr} was used since sympathetic nervous system has excitatory effects on cardiac functions and so it increases the heart rate; \gls{eda} and \gls{skt} on the other hand register the variations on the skin temperature and dryness caused by the vasoconstriction due to anxiety.\\
+
+During the participation to the VR-based tasks, the mean value of the participant's physiological indexes were estimated in a synchronized manner along with VR-based task progression; before the start of the real trial, a 3 min long period of time was dedicated to record physiological signals representing the normal state, in order to make a comparison with the altered signals that would have been taken in a second moment. Subsequently these indexes were given as inputs to an anxiety predictor which was based on fuzzy-logic for a more reliability when facing data uncertainty.
+
+Both \gls{as} and \gls{ps} systems had 12 social stories and relative tasks divided in three levels of difficulty.
+
+\subsubsection{Results}
+\label{sec:resultsVR}
+After the described experiment, some valuable conclusions have been drawn:
+\begin{itemize}
+\item The participants appreciated the interaction with the system and did not feel agitation when dealing with the physiological sensors, so this was a good index that such a system can be well accepted by the target population;
+\item The tasks were presented by a \gls{va} showing a happy expression in some cases, while an angry one in other cases and the anxiety measures revealed a slight increase in anxiety when the subjects were dealing with the angry face;
+\item The number of task trials that were successfully executed by the subjects was higher in the case of the \gls{as} system, this suggesting that \gls{as} system brought the participants to higher levels of challenge for a longer duration of time. The great implication of this is that the system could be a good solution for improving the skill training.
+\end{itemize}
+
+A lot of improvements still need to be done over this system: for example a further step can be adding an eye tracking tool in order to better understand on what the subject is focusing while looking at the \gls{va}, and so, if the aspect of the \gls{va} itself (like the expression on the face) can be a real reason of anxiety increase or reduction. Moreover, the system can make use of a technology different from the Biopac M150, which is expensive and offers the monitoring of parameters not really necessary for this type of project.
+
+Looking at the whole system it can be stated that this tool can allow a very useful didactic training procedure for people with \gls{asd}, and its potential affordability for normal families and relatively easy use make it a powerful solution in the research field  of \gls{asd}. \cri{forse devo essere più specifica nella parte in cui descrivo come il sistema as adatta le task all'ansia?}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Conclusions}\label{sec:conclusions}
 
