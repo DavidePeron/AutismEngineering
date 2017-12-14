@@ -194,9 +194,9 @@ Autism Spectrum Disorder, Avatar-robots, Wearable Technology, Health Monitoring
 \section{Introduction} \label{sec:introduction}
 
 % TODO Brief presentation of ASD (?)
-\gls{asd} is a term used to cover a very big set of disorders. There are a lot of studies and experiments in this field, but still a lot questions about it are unresolved: for example, the symptoms are well known, while the causes are still mostly unknown. Nowadays \textit{screening tests} are used to classify a person as affected by \gls{asd}, but these tests have an high percentage of error (false positive or negative) and they can be administered to a patient who is at least 3 years old. For this reason, several techniques have been studied in order to establish if a children has this disorder in the first 2 years of life.
+\gls{asd} is a term used to cover a very big set of disorders. There are a lot of studies and experiments in this field, but still a lot questions about it are still not being solved \DP{Forse qui ci vanno i due punti :D}, for example, the symptoms are well known, while the causes are still mostly unknown. Nowadays \textit{screening tests} are used to classify a person as affected by \gls{asd}, but these tests have an high percentage of error (false positive or negative) and they can be administered to a patient who is at least 3 years old. For this reason, several techniques have been studied in order to establish if a children has this disorder in the first 2 years of life.
 
-With respect to these aims, this work is divided into two main sections: In \autoref{sec:diagnosis} we present some innovative tools and procedures to help diagnosing the syndrome in the first one or two years of a child; in \autoref{sec:thera_tech} we describe two devices and methods useful for learning and improving cognitive skills.
+With respect to these aims, this work is divided into two main sections: in \autoref{sec:diagnosis} we present some innovative tools and procedures to help diagnosing the syndrome in the first one or two years of a child; in \autoref{sec:thera_tech} we describe two devices and methods useful for learning and improving cognitive skills.
 
 \section{Diagnostic techniques}
 \label{sec:diagnosis}
@@ -208,17 +208,17 @@ A different aspect to take into consideration when facing subjects with \gls{asd
 Moreover, although normally it is not considered as a diagnostic criteria, motor impairment associated with ASD may have a significant impact on daily life tasks and, since up to 80\% of children with autism show motor anomalies highly correlated with the severity of social deficiency, hand-eye coordination could be considered as a new early diagnostic strategy for ASD syndrome. In fact, it has been suggested that sensory integration with bad timing brings to poor motor performance in children with ASD: the task of integrating multisensory input influences the forming of coherent perception, action coordination and planning. Nowadays, the normal procedure to assess this motor coordination deficiency is the clinical observation and self-report questionnaires, so a new non-invasive objective method to map the development of ASD such hand-eye motor performance, could be a powerful diagnostic tool.
 
 \subsubsection{Material and methods}
-In \cite{Casellato2017} the experimental set-up involved sixteen children aged between 8 and 10 years old and was composed by a haptic robotic manipulandum (Phantom Omni, Sensable-Geomagic) with a 3D printed pen-like handle, a control pc with a suited control algorithm running and a table-mounted screen Eye tracker T60 (Tobii) of $1280\times1024$ pixels. The manipulandum's sampling frequency was of 1 kHz, while the Eye Tracker's sampling frequency was of 60 Hz.
+In \cite{Casellato2017} the experimental set-up involved 16 children aged between 8 and 10 years old and was composed by a haptic robotic manipulandum (Phantom Omni, Sensable-Geomagic) with a 3D printed pen-like handle, a control pc with a suited control algorithm running and a table-mounted screen Eye tracker T60 (Tobii) of $1280\times1024$ pixels. The manipulandum's sampling frequency was of 1 kHz, while the Eye Tracker's sampling frequency was of 60 Hz.
 
 Prior to the beginning of the trial, a brief amount of time was given to the children in order to familiarize with the system.
 
-The actual trial consisted in two main tasks: the first task was about following a diagonal straight path moving an end-effector from a start square to an end square without exiting the path boundaries; in the second task a target moved on the screen following a curvilinear predefined path representing a digitalized version of the visuo-motor precision sub-task of the NEPSY-II protocol.
+The actual trial consisted in two main tasks: the first task was about following a diagonal straight path moving an end-effector from a start square to an end square without exiting the path boundaries; in the second task a target moved on the screen following a curvilinear predefined path representing a digitalized version of the visuo-motor precision sub-task of the NEPSY-II protocol \DP{Cos'è il NEPSY-II protocol?}.
 
 During the first task, a primary amount of attempts was done without applying external force disturbance to the pen-like handle; the attempts that followed, instead, were perturbed by an external force, while the final ones were not perturbed again. Results from this task show that:
 \begin{itemize}
 \item the task was fulfilled pretty well in the first unperturbed part;
 \item during the first perturbed attempts the performance of the subjects were significantly low and attest a slow adaptation to the change;
-\item after some perturbed attempts the subjects eventually manage to compensate the force almost properly, with a progressive reduction in the product $pathL \dot T$ (where $pathL$ is the length of the path while $T$ is the time taken to travel through it);
+\item after some perturbed attempts the subjects eventually manage to compensate the force almost properly, with a progressive reduction in the product $pathL \cdot T$ (where $pathL$ is the length of the path while $T$ is the time taken to travel through it);
 \item when the attempts go back to be not-perturbated there is an initial overcompensation, which eventually is re-calibrated with even better performance than the ones obtained initially.
 \end{itemize}
 
@@ -235,19 +235,19 @@ During the first task, a primary amount of attempts was done without applying ex
 \begin{minipage}{0.48\textwidth}
 \centering
 \includegraphics[width=\textwidth]{task1_pT.png}
-\caption{Task 1 pathLxT vs n of trials}
+\caption{Task 1 $pathL \cdot T$ vs number of trials}
 \label{fig:task1_pT}
 \end{minipage}
 \end{figure}
 
-During the second task there is a significant difference between \gls{td} (TD) children and children with ASD and between the first and the second attempt:
+During the second task there is a significant difference between \gls{td} children and children with ASD and between the first and the second attempt\DP{Il second task è strutturato come il primo? Come sono gli attempts? Non lo hai spiegato}:
 \begin{itemize}
-\item Even though there is not a strong correlation among the children of a same group, it can be noticed that both TD children and ASD children performed better during the second attempt, when they already knew the path to follow a priori;
+\item Even though there is not a strong correlation among the children of a same group, it can be noticed that both TD children and \gls{asd} children performed better during the second attempt, when they already knew the path to follow a priori;
 \item In general, \gls{td} children had better performance than \gls{asd} children;
-\item For ASD children, the \textit{hand-gaze} distance was higher than for TD children, but quite the same in both the attempts.
+\item For \gls{asd} children, the \textit{hand-gaze} distance was higher than for TD children, but quite the same in both the attempts.
 \end{itemize}
 
-Figure \autoref{path} shows an example of trial with a TD child.
+\autoref{path} shows an example of trial with a \gls{td} child.
 
 \begin{figure}[t]
 \centering
@@ -261,8 +261,8 @@ Figure \autoref{path} shows an example of trial with a TD child.
 
 The experiment results can be summarized with a few crucial conclusions:
 \begin{itemize}
-\item the first task showed how children with \gls{asd} took longer to learn the task execution correctly, even though once the process had been assimilated the execution was correct, this meaning that these children showed a delayed ability to learn from sensory prediction errors; moreover the ASD child had more variability in motor execution, this suggesting more difficulty in maintaining performance consistency, and the gaze pattern was sticking less to the hand pattern if compared to the \gls{td} children.
-\item the second task showed how children with ASD obtained performance slightly worse than the TD children, but anyway they were able to deploy the information regarding the previously assimilated path to improve the performance. This suggests that \gls{asd} children are able to take advantage of the availability of the whole motor plan and supports the hypothesis that simple motor planning is intact but there is a diminished use of feedback.
+\item the first task showed how children with \gls{asd} took longer to learn the task execution correctly, even though once the process had been assimilated the execution was correct. This meaning that these children showed a delayed ability to learn from sensory prediction errors; moreover the ASD child had more variability in motor execution, this suggesting more difficulty in maintaining performance consistency, and the gaze pattern was sticking less to the hand pattern if compared to the \gls{td} children.
+\item the second task showed how children with ASD obtained performance slightly worse than the TD children, but anyway they were able to deploy the information regarding the previously assimilated path to improve the performance. This suggests that \gls{asd} children are able to take advantage of the availability of the whole motor plan and supports the hypothesis that simple motor planning ability is intact but there is a diminished use of feedback.
 \end{itemize}
 
 From these results, since the timing (which is strictly associated with adaptation and prediction) is one of the crucial aspects managed by the cerebellum (known to be the cerebral section reporting the most consistent brain differences in autism), it can be supported the hypothesis that bad timing in sensory integration causes degraded motor performance and delayed learning in children with \gls{asd}.
@@ -272,7 +272,7 @@ Such dysfunctions could affect not only motor processes but also cognitive ones,
 \subsection{Abnormalities in Connectivity of EEG activity}
 \label{sec:EEG}
 
-In 1943 a first case of an autistic person developing epilepsy was described. Since then, multiple cases have been registered and so researchers started to look for associations between abnormal \gls{eeg} findings and individuals with \gls{asd}. This field is still mostly to be uncovered, since classification and evaluation of \gls{eeg} signals are limited for now, but recent studies suggest a feasible use of this diagnostic technique in the field of gls{asd} \cite{Behnam2008}.
+In 1943 a first case of an autistic person developing epilepsy was described. Since then, multiple cases have been registered and so researchers started to look for associations between abnormal \gls{eeg} findings and individuals with \gls{asd}. This field is still mostly to be uncovered, since classification and evaluation of \gls{eeg} signals are limited for now, but recent studies suggest a feasible use of this diagnostic technique in the field of \gls{asd} \cite{Behnam2008}.
 
 If we unify the knowledge on the \gls{eeg} functioning principles, to the signal processing theory, we obtain a powerful diagnostic tool: representations based on Fourier Transform have been commonly applied and this brought to light that the \gls{eeg} spectrum contains five main frequency bands with characteristic waveforms and so the main way to highlight differences between normal subjects and autistic subjects can be to analyze the coherence of \gls{eeg} signals form different brain regions in order to find coupling among the signals in frequency domain.
 
@@ -293,7 +293,7 @@ To evaluate the statistical difference between the control group's signals and t
 \label{sec:discussion}
 
 Results show that the discriminating ability of nearest neighbor classifier over STFT-BW is satisfactory (0.967 for the F3 electrode) and \autoref{tab:prediction} shows a $89.5 \%$ probability of correct classification through  STFT-BW.
-Moreover, \autoref{fig:head} shows the obtained results for the three frequency bands alpha beta and gamma: coherence values that show meaningful differences with $p < 0.05 $ are represented through dot lines, while differences with $p < 0.01$ are represented through solid lines: the resulting observation is that there are more abnormalities in connectivity for the left temporal lobe than the other ones, observation that sticks with the assumption of a correlation between \gls{asd} syndrome and abnormal behavior of temporal lobes \cite{Zilbovicius2000} \cite{ANA}.
+Moreover, \autoref{fig:head} shows the obtained results for the three frequency bands alpha beta and gamma: coherence values that show meaningful differences with $0.01 < p < 0.05 $ are represented through dot lines, while differences with $p < 0.01$ are represented through solid lines: the resulting observation is that there are more abnormalities in connectivity for the left temporal lobe than the other ones, observation that sticks with the assumption of a correlation between \gls{asd} syndrome and abnormal behavior of temporal lobes \cite{Zilbovicius2000} \cite{ANA}.
 
 \begin{table}
 \centering
@@ -323,8 +323,6 @@ The classical way to conduct a therapy session is a face-to-face meeting between
 Usually, it is conducted in four phases: the first one is called \textit{Instruction}, in which the therapist explains what is the skill that the subject is going to learn; the second one is the \textit{Modeling} phase, in which the therapist shows the patient what he has to do; then there is the \textit{Rehearsal} phase, in which the patient tries to imitate the therapist, and finally a \textit{Feedback} phase in which the therapist draws its own conclusions about the test.
 The problem of this kind of therapy structure is the completely subjective evaluation procedure carried out by the therapist and the non-immediate subject's attention.
 
-%TODO Avatar-based techniques to improve the performances of the therapy
-%TODO Methods to detect the anxiety level
 To improve the performance of the sessions, the use of \gls{va} platforms has been introducted.
 A \gls{va} platform consists of an Avatar, that can be a robot or a virtual character, a learning software that receives information from the Avatar, elaborates them and adjusts the response of the Avatar, and an interface for the therapist that interprets the results.
 In a \gls{va} session the therapist, with the aids of the learning software, trains the Avatar to do an action that the child has to imitate. At the same time, the child tries to imitate the Avatar learning new ways to interact with the society.
@@ -383,11 +381,12 @@ The total score is given by the sum of three contributes:
 \begin{LaTeXdescription}
 	\item[Motion Score] is relative to the goodness of the movement made by the patient to imitate the robot;
 	\item[Attention Score] the child takes one point for each second he's looking at the robot’s face whenever the robot is asking him a question;
-	\item[Response Score] for this score, points are given for the delay time between the moment in which the robot asks a question and moment in which the child start answering the questions.
-	10 points are given for the first 10 seconds after the robot/therapist stops talking, and one point is subtracted for each second of delay.
+	\item[Response Score] for this score, points are given for the delay time between the moment in which the robot asks a question and the moment in which the child start answering the questions.
+	10 points are given within the first 10 seconds after the robot/therapist stops talking, and one point is subtracted for each second of delay.
 \end{LaTeXdescription}
 
 After 20 minutes of session therapy, results are collected.
+
 This experiment has been done in five healthy male children and with three different type of interaction subject: an avatar programmed as said before, a pre-programmed robot and a therapist in a classical face-to-face session. Score has been collected for each type of interaction and the results are shown in \autoref{fig:scores}.
 
 As we can see the performance of the avatar are initially almost equal to the ones of a pre-programmed robot, but along the session, child gets bored of the last one due to its repetitive movements and requirements, while the score with the avatar increases due to its continuous adaption to the child needs.
@@ -403,7 +402,7 @@ Kuriakose et al. in \cite{Kuriakose2017} presented a new interactive and didacti
 \subsubsection{Structure of the trial}
 The system was divided into two subsystems, the \gls{as} and the \gls{ps} systems: the \gls{as} one adapts the tasks' level based on the performance of the subject and his anxiety level measured through the physiological indexes; the \gls{ps} one changes tasks' difficulty based only on the performance of the subject.
 
-While the participants were interacting with VR-based systems, their \gls{pr}, \gls{eda} and \gls{skt} signals, were acquired by an instruments called Biopac MP150 (from Biopac Systems Inc.) which operates in wireless mode with sampling frequency of 1 KHz. These signals were chosen because of their advantage of being measurable in a non-invasive way.
+While the participants were interacting with VR-based systems, their \gls{pr}, \gls{eda} and \gls{skt} signals, were acquired by an instruments called \textit{Biopac MP150} (from Biopac Systems Inc.) which operates in wireless mode with sampling frequency of 1 KHz. These signals were chosen because of their advantage of being measurable in a non-invasive way.
 
 To be specific, \gls{pr} was used since sympathetic nervous system has excitatory effects on cardiac functions and so it increases the heart rate; \gls{eda} and \gls{skt} on the other hand register the variations on the skin temperature and dryness caused by the vasoconstriction due to anxiety.\\
 
@@ -420,7 +419,7 @@ After the described experiment, some valuable conclusions have been drawn:
 \item The number of task trials that were successfully executed by the subjects was higher in the case of the \gls{as} system, this suggesting that \gls{as} system brought the participants to higher levels of challenge for a longer duration of time. The great implication of this is that the system could be a good solution for improving the skill training.
 \end{itemize}
 
-A lot of improvements still need to be done over this system: for example a further step can be adding an eye tracking tool in order to better understand on what the subject is focusing while looking at the \gls{va}, and so, if the aspect of the \gls{va} itself (like the expression on the face) can be a real reason of anxiety increase or reduction. Moreover, the system can make use of a technology different from the Biopac M150, which is expensive and offers the monitoring of parameters not really necessary for this type of project.
+A lot of improvements still need to be done over this system: for example a further step can be adding an eye tracking tool in order to better understand on what the subject is focusing while looking at the \gls{va}, and so, if the aspect of the \gls{va} itself (like the expression on the face) can be a real reason of anxiety increase or reduction. Moreover, the system can make use of a technology different from the \textit{Biopac M150}, which is expensive and offers the monitoring of parameters not really necessary for this type of project.
 
 Looking at the whole system it can be stated that this tool can allow a very useful didactic training procedure for people with \gls{asd}, and its potential affordability for normal families and relatively easy use make it a powerful solution in the research field  of \gls{asd}.
 
